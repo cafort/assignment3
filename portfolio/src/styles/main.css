@@ -1,0 +1,55 @@
+/***** Color schemes ****
+https://coolors.co/002642-004d84-0085e5-dae0e5-01090f
+#002642
+#004d84
+#0085e5
+#dae0e5
+#01090f
+
+*/
+
+/* Set box sizing */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Global styles */
+body {
+    background-color: #DAE0E5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Navigation */
+.hero-header {
+
+}
+
+nav {
+    background-color: #002642; 
+    padding: 20px;
+    width: 100%;
+    text-align: right;
+}
+
+nav a {
+    color: #DAE0E5;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav a.active {
+        background-color: #004D84;
+}
+
+nav a:hover {
+    background-color: #004D84;
+}
