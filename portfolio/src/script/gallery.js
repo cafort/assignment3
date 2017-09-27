@@ -54,7 +54,7 @@ $(document).ready(function () {
                 $(gallerySlide).fadeIn(500);
                 galleryCounter.innerHTML = [i + 1] + "/" + images.length;
             });
-        }
+        };
 
         //Add event listener for the Next button
         document.getElementById("nextBtn").addEventListener("click", advance);
@@ -79,7 +79,6 @@ $(document).ready(function () {
             } else {
                 i = images.length - 1;
             };
-
             imgFader();
         }
     };
