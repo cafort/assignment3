@@ -46,12 +46,12 @@ nav a.active, nav a:hover {
 /* Hero area */
 /* Home page */
 .hero-header {
-    background: url('/assets/slide.jpg');
+    background: url('../assets/slide.jpg');
 }
 
 /* Projects page */
 .projects-hero {
-    background: url('/assets/alley.jpg');
+    background: url('../assets/alley.jpg');
 }
 
 /* General header setting */

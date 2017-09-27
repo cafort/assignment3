@@ -5,31 +5,31 @@ $(document).ready(function () {
     function gallery() {
         // Create array of image objects
         var images = [{
-                "img": "../assets/selfie.jpg",
+                "img": "assets/selfie.jpg",
                 "cutline": "An old-fashioned selfie in a Hobby Lobby"
             },
             {
-                "img": "../assets/tablecat.jpg",
+                "img": "assets/tablecat.jpg",
                 "cutline": "Cat under a chrome table"
             },
             {
-                "img": "../assets/waterslide.jpg",
+                "img": "assets/waterslide.jpg",
                 "cutline": "An old water slide in Oklahoma"
             },
             {
-                "img": "../assets/eaglebike.jpg",
+                "img": "assets/eaglebike.jpg",
                 "cutline": "An eagle bike in downtown Springdale"
             },
             {
-                "img": "../assets/treeworker.jpg",
+                "img": "assets/treeworker.jpg",
                 "cutline": "Helping to clean up the Fort Smith National Cemetery"
             },
             {
-                "img": "../assets/lightbulb.jpg",
+                "img": "assets/lightbulb.jpg",
                 "cutline": "Showing the heat from an incandescent bulb using an infrared camera"
             },
             {
-                "img": "../assets/mall.jpg",
+                "img": "assets/mall.jpg",
                 "cutline": "Walking at the mall in Rogers"
             },
         ];
