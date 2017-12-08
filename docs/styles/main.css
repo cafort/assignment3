@@ -1,13 +1,3 @@
-/***** Color schemes ****
-https://coolors.co/002642-004d84-0085e5-dae0e5-01090f
-#002642
-#004d84
-#0085e5
-#dae0e5
-#01090f
-
-*/
-
 /* Set box sizing */
 html {
   box-sizing: border-box;
@@ -24,12 +14,17 @@ body {
     padding: 0;
 }
 
+/* Typography */
+.muted {
+    color: #aaa;
+}
 
 /* Navigation */
 nav {
     background-color: #fff;
-    padding: 20px;
-    text-align: right;
+    border-bottom: 1em solid #ddd;
+    display: flex;
+    flex-direction: column;
 }
 
 nav a {
@@ -43,10 +38,15 @@ nav a.active, nav a:hover {
         background-color: #ddd;
 }
 
+nav h3 {
+    padding: 0 1em;
+}
+
 /* Hero area */
 /* Home page */
 .hero-header {
     background: url('../assets/slide.jpg');
+    border-bottom: 1em solid #ddd;
 }
 
 /* Projects page */
@@ -58,13 +58,11 @@ nav a.active, nav a:hover {
 .hero-header {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
 }
 
 .hero-header header {
     background-color:#fff;
     margin: 0 auto;
-    margin-top: 50px;
     padding: 15px;
     max-width: 350px;
     width: 66%;
@@ -89,7 +87,6 @@ img.frame {
     min-height: 330px;
     max-width: 960px;
     padding: 20px;
-    text-align: center;
 }
 
 /* Cards */
@@ -172,9 +169,42 @@ footer a:hover {
     border: 2px solid black;
 }
 
+footer.print {
+    display:none;
+}
+
+/* Buttons */
+button {
+    border: 1px solid black;
+    padding: 1em 2em;
+}
+
+button:hover {
+    background: #ddd;
+}
+
+button:active {
+    background: #000;
+    color: #fff;
+}
+
+/* Resume */
+.resume {
+    display: block;
+    max-width: 800px;
+}
+
+.resume section {
+    border-bottom: 1px dashed #ddd;
+}
+
+ .resume h3, .resume h4 {
+    margin: 0;
+}
+
 /****** DESKTOP / TABLET VIEW *****/
 @media screen and (min-width: 960px) {
-    .main {
+    .main, nav {
         flex-direction: row;
     }
 
@@ -186,5 +216,25 @@ footer a:hover {
 
     .gallery {
         width: 50%;
+    }
+}
+
+/*** Print view for resume ***/
+@media print {
+
+    @page {
+        margin: 0;
+    }
+
+    header, nav, footer, .noprint, button {
+        display: none;
+    }
+
+   footer.print {
+        display: block;
+    }
+
+    body {
+        margin: 1em;
     }
 }
