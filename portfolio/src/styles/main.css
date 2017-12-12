@@ -1,25 +1,35 @@
 /* Set box sizing */
+
 html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
 /* Global styles */
+
 body {
-    background-color:#FFFFFF;
-    color:#191919;
+    background-color: #FFFFFF;
+    color: #191919;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0;
 }
 
+
 /* Typography */
+
 .muted {
     color: #aaa;
 }
 
+
 /* Navigation */
+
 nav {
     background-color: #fff;
     border-bottom: 1em solid #ddd;
@@ -34,34 +44,44 @@ nav a {
     text-decoration: none;
 }
 
-nav a.active, nav a:hover {
-        background-color: #ddd;
+nav a.active,
+nav a:hover {
+    background-color: #ddd;
 }
 
 nav h3 {
     padding: 0 1em;
 }
 
+
 /* Hero area */
+
+
 /* Home page */
+
 .hero-header {
     background: url('../assets/slide.jpg');
     border-bottom: 1em solid #ddd;
 }
 
+
 /* Projects page */
+
 .projects-hero {
     background: url('../assets/alley.jpg');
 }
 
+
 /* General header setting */
+
 .hero-header {
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
 }
 
 .hero-header header {
-    background-color:#fff;
+    background-color: #fff;
     margin: 0 auto;
     padding: 15px;
     max-width: 350px;
@@ -78,36 +98,43 @@ img.frame {
 
 
 /* Main section */
+
 .main {
     align-content: stretch;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
-    min-height: 330px;
     max-width: 960px;
     padding: 20px;
 }
 
+
 /* Cards */
+
 section.card {
     border: 2px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 5%;
-    min-height: 200px;
-    padding: 1%;
+    padding: 1em;
+}
+
+.card h2 {
     text-align: center;
 }
 
+
 /* Button style links in cards */
+
 .card a {
     background-color: #000;
     color: #fff;
     display: block;
     padding: 10px;
     text-decoration: none;
+    text-align: center;
     width: 100%;
 }
 
@@ -117,7 +144,9 @@ section.card {
     color: #000;
 }
 
+
 /* Photo gallery */
+
 .gallery {
     background-color: #ddd;
     margin: 20px auto;
@@ -144,7 +173,9 @@ section.card {
     float: right;
 }
 
+
 /* Footer */
+
 footer {
     background-color: #ddd;
     clear: both;
@@ -158,7 +189,6 @@ footer a {
     color: #000;
     padding: 10px;
     text-decoration: none;
-
 }
 
 footer a:active {
@@ -169,11 +199,13 @@ footer a:hover {
     border: 2px solid black;
 }
 
-footer.print {
-    display:none;
+.print {
+    display: none;
 }
 
+
 /* Buttons */
+
 button {
     border: 1px solid black;
     padding: 1em 2em;
@@ -188,7 +220,9 @@ button:active {
     color: #fff;
 }
 
+
 /* Resume */
+
 .resume {
     display: block;
     max-width: 800px;
@@ -198,43 +232,87 @@ button:active {
     border-bottom: 1px dashed #ddd;
 }
 
- .resume h3, .resume h4 {
+.resume h3,
+.resume h4 {
     margin: 0;
 }
 
+
 /****** DESKTOP / TABLET VIEW *****/
+
 @media screen and (min-width: 960px) {
-    .main, nav {
+    
+    .hero-header {
+        min-height: 600px;
+    }
+
+    .hero-header header {
+        align-self: center;
+    }
+    
+    .main,
+    nav {
         flex-direction: row;
+    }
+
+    .main {
+        flex-wrap: wrap;
     }
 
     section.card {
         flex-basis: 33%;
-        margin-top: 0;
+        flex-wrap: wrap;
+        margin-top: 0.5em;
         padding-top: 20px;
     }
-
     .gallery {
         width: 50%;
     }
 }
 
+
 /*** Print view for resume ***/
+
 @media print {
-
     @page {
-        margin: 0;
+        margin: auto;
     }
-
-    header, nav, footer, .noprint, button {
+    header,
+    nav,
+    footer,
+    .noprint,
+    button {
         display: none;
     }
 
-   footer.print {
-        display: block;
+    h1 {
+        font-size: 24px;
     }
 
-    body {
-        margin: 1em;
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
+
+    .print {
+        display: block;
+        float: right;
+        border: none;
+    }
+
+    .muted {
+        display: block;
+        color: #888;
     }
 }
